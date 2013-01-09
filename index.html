@@ -1,66 +1,406 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Balihoo Code Style Guide by Balihoo Dev</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Balihoo Code Style Guide</h1>
-        <p>To provide Balihoo's front-end developers a core coding style guide to create more uniform standard code.</p>
-
-        <p class="view"><a href="https://github.com/BalihooDev/csg">View the Project on GitHub <small>BalihooDev/csg</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/BalihooDev/csg/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/BalihooDev/csg/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/BalihooDev/csg">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/BalihooDev">BalihooDev</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+	
+	<head>
+	
+		<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+		
+		<meta charset="utf-8">
+		
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+		
+		<title>Balihoo Code Style Guide</title>
+		
+		<link href="stylesheets/styles.css" rel="stylesheet" type="text/css" />
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		
+		<script>
+		
+		function goToByScroll(id){
+     	
+     		$('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
+     	
+     	}
+			
+		</script>
+		
+	</head>
+	
+	<body>
+	
+		<div id="sideBar">
+		
+			<ul>
+			
+				<li><a href="javascript:void(0)" onClick="goToByScroll('html_content')">HTML</a></li>
+				
+				<li><a href="javascript:void(0)" onClick="goToByScroll('css_content')">CSS</a></li>
+				
+				<li><a href="javascript:void(0)" onClick="goToByScroll('js_content')">JAVASCRIPT</a></li>
+				
+				<li><a href="javascript:void(0)" onClick="goToByScroll('php_content')">PHP</a></li>
+				
+				<li><a href="javascript:void(0)" onClick="goToByScroll('mobile_content')">MOBILE</a></li>
+				
+			</ul>
+			
+		</div>
+	
+		<div id="content">
+		
+			<h1 id="balihoo">Balihoo</h1>
+			
+			<h1 id="styleGuide">Code Style Guide</h1>
+			
+			<br />
+			
+			<p>To provide Balihoo's front-end developers a core coding style guide to create more uniform standard code.</p>
+		
+			<h2 id="html_content">HTML</h2>
+			
+			<hr>
+			
+			<h3>Spacing</h3>
+			
+			<p>Spacing in standard markup will indent by one tab (or four spaces) and have one line space between each line of code.</p>
+			
+			<div class="codeBlock">
+			
+				&lt;div&gt; 
+				
+				<br />
+				
+				<br />
+				
+				<b>&nbsp;&rarr;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>&lt;p&gt;Hello World&lt;/p&gt;
+				
+				<br />
+				
+				<br />
+				
+				<b>&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;</b>&lt;p&gt;Hello World&lt;/p&gt;
+				
+				<br />
+				
+				<br />
+				
+				&lt;/div&gt; 
+			
+			</div>
+			
+			<h3>Comments</h3>
+			
+			<p>Comments will fall into three categories: <b>inline</b>, <b>closing</b>, and <b>block</b>. Inline comments are for on-the-fly labeling, reminders, and other short notes. Closing comments come in handy for keeping track on multiple nested elements, especially block elements like divs. Proper usage of the closing comment should be almost an extension of the closing tag and include the elements selector(e.g. &lt;!-- /wrapper --&gt;). Avoid commenting on obvious code. </p>
+			
+			<h4>Inline Comment:</h4>
+			
+			<div class="codeBlock">
+				
+				&lt;p&gt;Hello World&lt;/p&gt;<b>&lt;!-- Inline Comment --&gt;</b>
+				
+			</div>
+			
+			<h4>Closing Comment:</h4>
+			
+			<div class="codeBlock">
+				
+				&lt;div id="wrapper"&gt;
+			
+				<br />
+				
+				<br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Some text&lt;/p&gt;
+				
+				<br />
+				
+				<br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Some more text&lt;/p&gt;
+				
+				<br />
+				
+				<br />
+				
+				&lt;/div&gt;<b>&lt;!-- /wrapper --&gt;</b>
+				
+			</div>
+			
+			<h4>Block Comment:</h4>
+			
+			<div class="codeBlock">
+				
+				<b>&lt;!-- \/ Block Comment Start --&gt;</b>
+				
+				<br />
+				
+				&lt;div&gt;
+			
+				<br />
+				
+				<br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Some text&lt;/p&gt;
+				
+				<br />
+				
+				<br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Some more text&lt;/p&gt;
+				
+				<br />
+				
+				<br />
+				
+				&lt;/div&gt;
+				
+				<br />
+				
+				<b>&lt;!-- /\ Block Comment End --&gt;</b>
+				
+			</div>
+			
+			<h2 id="css_content">CSS</h2>
+			
+			<hr>
+			
+			<h3>Spacing, Naming Convention, and Comments</h3>
+			
+			<p>For the stylesheet spacing, insert one line space between each declared selector. Each style will be tabbed once(four space) and have a line break after the value. Aligning a style's value is optional? Use <a href="http://en.wikipedia.org/wiki/Indent_style" target="_blank">ANSI</a> style brackets and camel case for the selectors(e.g. myClass). For comments we will have three types: inline, descriptive and block.</p>
+			
+			<h4>Spacing & Naming Convention</h4>
+			
+			<div class="codeBlock">
+				
+				.firstClass { <br />
+				
+				<b>&rarr;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>margin: 0;<br />
+				
+				<b>.&nbsp;.&nbsp;.&nbsp;.&nbsp;</b>padding: 0;<br />
+				
+				}
+				
+				<br />
+				
+				<br />
+				
+				.secondClass { <br />
+				
+				<b>&rarr;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>margin: 0;<br />
+				
+				<b>.&nbsp;.&nbsp;.&nbsp;.&nbsp;</b>padding: 0;<br />
+	
+				}
+				
+			</div>
+			
+			<h4>Comments:</h4>
+			
+			<div class="codeBlock">
+				
+				.firstClass { <br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;margin: 0;<b>&nbsp;/* Inline Comment */</b> <br />
+				
+				}
+				
+				<br />
+				
+				<br />
+				
+				.secondClass { <br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;<b>/*<br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* This is a bunch of descriptive<br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* text that explains something<br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* that applies to this selector.<br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;*/</b><br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;margin: 0; <br />
+				
+				}
+				
+				<br />
+				
+				<br />
+				
+				<b>/* \/ -- Code Section Start -- */</b>
+				
+				<br />
+				
+				.thirdClass { <br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;margin: 0; <br />
+				
+				}
+				
+				<br />
+				
+				<b>/* /\ -- Code Section End -- */&nbsp;(optional end cap)</b> 
+				
+			</div>
+			
+			<h4>Stylesheet Structure</h4>
+			
+			<div class="codeBlock">
+				
+				<b>/*<br />
+				
+				&nbsp;* Title: Stylesheet Name<br />
+				
+				&nbsp;* Created by: Author<br />
+				
+				&nbsp;* Date Created: Month, Year<br />
+				
+				&nbsp;* Desription: Brief description<br />
+				
+				*/</b>
+				
+				<br />
+				
+				<br />
+				
+				<b>/* \/ -- Resets -- */</b>
+				
+				<br />
+				
+				body { <br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;margin: &nbsp;0;<br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;padding: 0;<br />
+				
+				}
+				
+				<br />
+				
+				<br />
+				
+				<b>/* \/ -- Global Typography -- */</b>
+				
+				<br />
+				
+				h1, h2, h3... { <br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;margin: &nbsp;0;<br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;padding: 0;<br />
+				
+				}
+				
+				<br />
+				
+				<br />
+				
+				<b>/* \/ -- Global Elements (Borders, Arrows, Etc.) -- */</b>
+				
+				<br />
+				
+				.dottedBorder{ <br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;border: 1px dotted white;<br />
+				
+				}
+				
+			</div>
+			
+			<h2 id="js_content">Javascript & jQuery</h2>
+			
+			<hr>
+			
+			<h3>Functions</h3>
+			
+			<p>For both javascript and jQuery use <a href="http://en.wikipedia.org/wiki/Indent_style" target="_blank">ANSI</a> style brackets and spacing. Indent one tab (four spaces) and add a line space between lines of code. Name functions in camel case (e.g. myFunction).</p>
+			
+			<div class="codeBlock">
+				
+				function( arg ){
+				
+				<br />
+				
+				<br />
+				
+				<b>// your logic here</b>
+				
+				<br />
+				
+				<br />
+				
+				};
+				
+			</div>
+			
+			<h3>Variables</h3>
+			
+			<p>When creating local scope variables in both JS and jQuery using var if there is more than one variable a comma should be used (except for the last variable which ends with a semi-colon) and all subsequent variables should be aligned with the first variable.</p>
+			
+			<div class="codeBlock">
+				
+				var creativeDevs, <br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;scott,<br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;djame,<br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;becca;<br />
+				
+			</div>
+			
+			<h3>jQuery Methods</h3>
+			
+			<p>If a project calls for a custom jQuery method to be created follow the standard below using the same styles and indentation as the functions, just within the scope of the jQuery object.</p>
+			
+			<div class="codeBlock">
+				
+				$.fn.extend({ <br />
+				
+				<br />
+				
+				<br />
+				
+				<b>&nbsp;&rarr;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>myFirstMethod: function (){ <br />
+				
+				<br />
+				
+				<b>&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;// Method Logic Here</b>
+				
+				<br />
+				
+				<br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;} 
+				
+				<br />
+				
+				<br />
+				
+				<b>&nbsp;.&nbsp;.&nbsp;.&nbsp;.&nbsp;</b>mySecondMethod: function (){ <br />
+				
+				<br />
+				
+				<b>&nbsp;&rarr;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Method Logic Here</b>
+				
+				<br />
+				
+				<br />
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;} 
+				
+				<br />
+				
+				<br />
+				
+				});
+				
+			</div>
+		
+		</div>
+		
+	</body>
+	
 </html>
