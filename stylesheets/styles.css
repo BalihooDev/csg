@@ -60,14 +60,30 @@ p a:hover {
 	color: #f8981d;
 	letter-spacing:-3px;
 	text-shadow: 1px 1px 1px #CCC;
+	float: left;
+	width: 153px;
 }
 
 #styleGuide {
 	font-family: "Myriad-Pro", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-	margin: 0px 0 0 20px;
+	margin: 68px 0 0 0px;
 	font-size: 30px;
 	font-weight: 300;
 	color: #262626;
+	float: left;
+	width: 300px;
+}
+
+#intro {
+	width: 760px;
+	height: 150px;
+	float: none;
+}
+
+#intro p {
+	float: left;
+	width: 760px;
+	margin: 20px 0 20px 20px;
 }
 
 #sideBar {
@@ -78,9 +94,9 @@ p a:hover {
 	background: #FFF;
 	margin: 0;
 	padding: 60px 0 0 0;
-	-moz-box-shadow:    3px 3px 5px 6px #262626;
-    -webkit-box-shadow: 3px 3px 5px 6px #262626;
-    box-shadow:         1px 0px 1px 0px #777;
+	-moz-box-shadow:    3px 3px 5px 6px #AAA;
+    -webkit-box-shadow: 3px 3px 5px 6px #AAA;
+    box-shadow:         1px 0px 1px 0px #AAA;
 	
 }
 
